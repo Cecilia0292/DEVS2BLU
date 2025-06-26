@@ -1,0 +1,98 @@
+-PASSO A PASSO INSTALANDO O GIT NA MAQUINA
+
+Abrir aba navegador - busca git
+For windons- https://git-scm.com/downloads/win
+Git for Windows/x64 Setup
+
+Instalação
+
+pasta padrao - C:\Program Files\Git
+
+next 
+nao selecionar nada(tudo ja padrao)
+se desejar atalho
+next 
+se nao selecionar caixa abaixo
+next
+pergunta qual editor usa Vim é o padrao
+next 
+manter selcionado o let git decide
+next
+usar a opção do meio(Recommended)
+next
+Use Bundled OpenSSH
+next
+Use the native Windows Secure channel library
+next
+Chechout windows-style, comi.....
+next
+Use minTTY...
+next
+Fast-forward or merge
+next
+Git Credential Manager
+next
+Enable File system caching
+install
+
+-VERIFICANDO SE FOI INSTALADO COM SUCESSO O GIT
+
+CLICAR BOTAO DIREITO DEVE APARECER
+
+OPEN GIT GUI
+OPEN GIT BASH
+
+
+GITHUB DESKTOP
+
+VERIFICANDO SE ESTA TUDO CERTO
+
+ABRIR O PROMPT DE COMANDO
+digitar git
+limpar cls
+
+CONFIGURANDO
+
+PASSANDO AS CREDENCIAIS
+
+git config --global user.name "Cecilia0292"
+
+enter 
+
+git config --global user.email "loureiro.ruthe@gmail.com"
+
+enter
+
+git config --list (mostra se foi configurado nome e email)
+
+AUTENTICANDO O USUARIO
+
+CRIAR UMA PASTA
+PARA SALVAR TODOS OS EXERCICIOS
+clicar botao direito e abrir git bash
+
+Colocar o passo a passo descrito no github
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:Cecilia0292/devs2blu.git
+git push origin main ou master
+
+
+Atualizando arquivo
+
+git status
+
+3 passos 
+
+git add . ou nome arquivo
+git commit -m "Atualizando arquivo"
+git push origin master
+
+
+
+
+
+
+
