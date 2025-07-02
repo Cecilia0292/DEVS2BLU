@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+    <script>
+        //objeto
+        let pessoa ={
+            nome: 'Ruthe',
+            idade: 33,
+            cidade: 'Blumenau',
+            estado: 'Santa Catarina',
+            apresentar: function(){
+                alert(`Olá, meu nome é ${this.nome}, tenho ${this.idade} anos, sou de ${this.cidade}, ${this.estado}.`);
+            }
+        }
+        //selecionar caracteristicas do objeto
+        document.write(`Nome: ${pessoa.nome}<br>`);
+        document.write(`Idade: ${pessoa.idade}<br>`);
+        document.write(`Cidade: ${pessoa.cidade}<br>`); 
+        document.write(`Estado: ${pessoa.estado}<br>`);
+        pessoa.apresentar(); //chamada do método do objeto
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

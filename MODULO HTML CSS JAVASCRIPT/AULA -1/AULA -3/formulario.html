@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    
+</head>
+<body>
+    <form id="Formulario" onsubmit=" return enviar()">
+        <input type="text" placeholder="Digite seu nome">
+        <input type="email" placeholder="Digite seu email">
+        <input type="password" placeholder="Digite sua senha">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    <h1 id ='nome'></h1>
+    <h1 id='email'></h1>
+    <h1 id='senha'></h1>
+    <script>
+        const enviar = () =>{
+
+            //obter o elemento form 
+            let formulario = document.getElementById('Formulario');
+            
+            //extrair inputs
+            let campos = document.getElementsByTagName('input');
+            //obter os valores dos inputs
+            document.getElementById('nome').innerHTML = campos[0].value;
+            document.getElementById('email').innerHTML = campos[1].value;
+            document.getElementById('senha').innerHTML = campos[2].value;
+            //retorno
+            return false; // Impede o envio do formulário
+        }
+    </script>
+</body>
+</html>

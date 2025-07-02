@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional</title>
+    <script>
+        //Convertendo dados
+        //parseInt() - converte uma string para um número inteiro
+        //parseFloat() - converte uma string para um número de ponto flutuante
+        //obter uma idade
+        let idade = parseInt(prompt("Digite sua idade:"));
+        //verificar se a idade é maior ou igual a 18
+        if (idade>= 18){
+            alert("Você é maior de idade.");
+        }else{
+            alert("Você é menor de idade.");
+        }
+        //Condicional 2 operador ternário
+        alert(idade >= 18 ? "Você é maior de idade." : "Você é menor de idade.");
+        //condicional if/else if/else
+        if(idade >= 18){
+            alert("Você é maior de idade.");
+        } else if (idade >= 13 && idade < 18) {
+            alert("Você é um adolescente.");
+        } else if (idade >= 0 && idade < 13) {
+            alert("Você é uma criança.");
+        } else {
+            alert("Idade inválida.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
