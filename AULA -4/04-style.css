@@ -1,0 +1,49 @@
+/* Estilo geral da página*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-top: 50px;
+
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: #3e1aa1;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+div {
+    text-align: center; 
+    margin-top: 30px;
+    padding: 20px;
+    margin: 0 auto;
+}
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input[type="submit"]{
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#resultado {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #036811;
+}
+
