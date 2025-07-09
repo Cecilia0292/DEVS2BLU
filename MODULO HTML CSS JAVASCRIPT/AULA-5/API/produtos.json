@@ -1,0 +1,16 @@
+{
+  "produtos": [
+    {
+      "id": "b24d",
+      "nome": "TV",
+      "marca": "Samsung",
+      "valor": 4600
+    },
+    {
+      "id": "6db0",
+      "nome": "Iphone",
+      "marca": "apple",
+      "valor": 9600
+    }
+  ]
+}

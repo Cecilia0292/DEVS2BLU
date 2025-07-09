@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud - Produtos</title>
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- folha de estilo CSS -->
+    
+     <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!--formulario-->
+    <form>
+        <input type="text" class="form-control" placeholder="Id" readonly="readonly"> <!-- adicionar readonly é para deixar o campo somente de leitura/visualização ... boa pratica para projeto real -->
+        <input type="text" class="form-control" placeholder="Nome" id="nome">
+        <input type="text" class="form-control" placeholder="Marca" id="marca">
+        <input type="text" class="form-control" placeholder="Valor" id="valor">
+
+        <input type="button" value="Cadastrar" class="btn btn-primary" id="btnCadastrar">
+        <input type="button" value="Alterar" class="btn btn-primary" id="btnAlterar">
+        <input type="button" value="Remover" class="btn btn-primary" id="btnRemover">
+        <input type="button" value="Cancelar" class="btn btn-primary"id="btnCancelar">
+   
+    </form>
+    <!--tabela-->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Nome</td>
+                <td>Marca</td>
+                <td>Valor</td>
+                <td>Selecionar</td>
+            </tr>
+        </thead>
+        <tbody id="tabela">
+            <!-- Os dados dos produtos serão inseridos aqui dinamicamente -->
+        </tbody>
+
+    </table>
+    <!--Scripts-->
+    <script src="script.js"></script>
+</body>
+</html>
