@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD-Endereços</title>
+  <!-- Bootstrap para estilos prontos e responsividade -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="estilos.css" />
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1>Cadastros de endereços</h1>
+    <!--formulário para cadastro, edição e remoção de endereços-->
+    <form id ="formularioendereco" class="mb-4">
+      <input id="id" readonly type="hidden" />
+      <div class="mb-3">
+        <label>Nome</label>
+        <input type="text" id="nome" placeholder="Digite o nome" required />
+      </div>
+      <div class="mb-3">
+        <label>CEP</label>
+        <input type="text" id="cep" placeholder="Digite o CEP" required />
+      </div>
+      <div class="mb-3">
+        <label>Estado</label>
+        <input type="text" id="estado" placeholder="Estado" readonly />
+      </div>
+      <div class="mb-3">
+        <label>Cidade</label>
+        <input type="text" id="cidade" placeholder="Cidade" readonly />
+      </div>
+      <div class="mb-3">
+        <label>Bairro</label>
+        <input type="text" id="bairro" placeholder="Bairro" readonly />
+      </div>
+      <div class="mb-3">
+        <label>Logradouro</label>
+        <input type="text" id="logradouro" placeholder="Logradouro" readonly />
+      </div>
+      <!--Botoes para as ações -->
+      <div class="d-flex gap-2">
+        <button type="button" class="btn btn-success" onclick="cadastrar()">Cadastrar</button>
+        <button type="button" class="btn btn-warning" onclick="Alterar()">Alterar</button>
+        <button type="button" class="btn btn-danger" onclick="Remover()">Remover</button>
+        <button type="button" class="btn btn-secondary" onclick="Cancelar()">Cancelar</button>
+      </div>
+
+    </form>
+    <div>
+      <ul id="lista" class="list-group">
+        <!-- Os itens da lista virão aqui via JS -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-success" role="alert">
+    Endereço cadastrado com sucesso!
+  </div>
+
+  <div class="alert alert-danger" role="alert">
+    Erro ao cadastrar endereço.
+  </div>
+
+  <div class="text-center my-3">
+    <div class="spinner-border text-primary" role="status"></div>
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
