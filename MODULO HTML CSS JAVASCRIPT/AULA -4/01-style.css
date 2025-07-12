@@ -6,7 +6,7 @@
 }
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url('border\ num.png');
+    background-image: url('assets/borderNum.png');
     background-repeat: no-repeat;        /* não repetir a imagem */
     background-size: cover;              /* cobrir toda a tela */
     background-position: center;
@@ -16,7 +16,9 @@ body{
 h1{
     text-align: center;
     margin-top: 20px;
-    color: #3c18a1;
+    color: #3e1aa1;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 h2{
     text-align: center;
@@ -26,7 +28,6 @@ h2{
 form{
 
     width: 600px;
-    height: 300px;
     margin: 10% auto;
     display: flex;
     padding: 20px;
@@ -35,10 +36,11 @@ form{
 }
 
 input{
-
-    margin-bottom: 20px;
-    padding: 20px;
-    width: 400px;   
+    margin: 20px;
+    margin-bottom: 30px;
+    padding: 60px;
+    width: 300px; 
+    height: 60px;
 }
 
 input[type="submit"]{

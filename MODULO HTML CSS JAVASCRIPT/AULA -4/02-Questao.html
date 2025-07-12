@@ -10,23 +10,27 @@
 </head>
 <body>
 
-    <h1>Sistema de Conversão de moedas</h1>
-    <form id ="formulario" class="">
-        <input class="btn btn-outline-success" type="number" placeholder="Informe o valor que deseja converter R$" id="valor">
-        <select class="btn btn-outline-success" onchange="ConverterMoeda(this.value)">
+    <h1>Conversor de moedas</h1>
+    <label for="valor">Valor em Reais (R$):</label>
+    <input type="number" id="valor" placeholder="Digite o valor" />
+
+    <label for="moeda">Converter para:</label>
+    <!-- Select para escolher a moeda -->
+        <select id="moeda" name="moeda">
             <option value="" disabled selected>Selecione a moeda</option>
-            <option value="1">Dólar</option>
-            <option value="2">Euro</option>
-            <option value="3">Libra Esterlina</option>
-            <option value="4">Bitcoin</option>
+            <option value="dolar">Dólar</option>
+            <option value="euro">Euro</option>
+            <option value="libra">Libra Esterlina</option>
+            <option value="bitcoin">Bitcoin</option>
         </select>
-    </form>
 
-    <div>
-        <img>
-    </div>
+        <button onclick="converter()" class="btn btn-success">Converter</button>
+        <button onclick="limparCampos()" class="btn btn-light">Limpar</button>
 
-    <h1 id="resultado"></h1>
+        <div id="resultado"></div>
+        <img src="assets/real.png" id="imagemMoeda" alt="imagemMoeda"/>
+
+
     
     <script src="02-script.js"></script>
 </body>

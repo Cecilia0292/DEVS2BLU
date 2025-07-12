@@ -1,54 +1,59 @@
+    function converter() {
+      const valor = parseFloat(document.getElementById("valor").value);
+      const moeda = document.getElementById("moeda").value;
+      const imagemMoeda = document.getElementById("imagemMoeda");
+      let resultado = 0;
+      let simbolo = "";
 
-function converterMoeda(){
-    let formulario = document.getElementById("formulario");
-    // Valores
-    const dolar = 5.41;
-    const euro = 6.36;
-    const libra = 7.38;
-    const bitcoin = 594065; // 1 Bitcoin em Reais (aproximadamente)
+      if (isNaN(valor) || valor <= 0) {
+        document.getElementById("resultado").innerText = "Por favor, insira um valor válido.";
+        imagemMoeda.style.display = "none";
+        return;
+      }
 
-    // Obter a tag HTML de imagem
-    let imagemMoeda = document.getElementById('imagemMoeda');
-
-    // Obter o valor informado
-    const valor = parseFloat(document.getElementById('valor').value);
-
-    // Obter elemento HTML para retornar a conversão
-    let valorConvertido = document.getElementById('valorConvertido');
-
-    // Retornar a conversão
-    switch (parseInt(tipoMoeda)) {
-        case 1:
-            imagemMoeda.src = 'imagens/dolar';
-            valorConvertido.innerText = `$ ${(valor / dolar).toFixed(2)}`;
-        break;
-    
-        case 2:
-            imagemMoeda.src = 'imagens/euro';
-            valorConvertido.innerText = `€ ${(valor / euro).toFixed(2)}`;
-        break;
-    
-        case 3:
-            imagemMoeda.src = 'imagens/libra';
-            valorConvertido.innerText = `£ ${(valor / libra).toFixed(2)}`;
-        break;
-    
-        case 4:
-            imagemMoeda.src = 'imagens/bitcoin';
-            valorConvertido.innerText = `₿ ${(valor / bitcoin).toFixed(8)}`;
-        break;
-
+      switch (moeda) {
+        case "dolar":
+          resultado = valor / 5.00;
+          simbolo = "US$";
+          imagemMoeda.src = "assets/dolar.png";
+          break;
+        case "euro":
+          resultado = valor / 5.40;
+          simbolo = "€";
+          imagemMoeda.src = "assets/euro.png";
+          break;
+        case "libra":
+          resultado = valor / 6.20;
+          simbolo = "£";
+          imagemMoeda.src = "assets/libra.png";
+          break;
+        case "bitcoin":
+          resultado = valor / 250000;
+          simbolo = "₿";
+          imagemMoeda.src = "assets/bitcoin.png";
+          break;
         default:
-            imagemMoeda.src = 'imagens/moeda.png';
-            valorConvertido.innerText = '';
-        break;
+          document.getElementById("resultado").innerText = "Selecione uma moeda válida.";
+          imagemMoeda.style.display = "none";
+          return;
+      }
+
+      document.getElementById("resultado").innerText = `Resultado: ${simbolo} ${resultado.toFixed(6)}`;
+      imagemMoeda.style.display = "block"; // Mostrar imagem
     }
-}
+
+    function limparCampos() {
+      document.getElementById("valor").value = "";
+      document.getElementById("moeda").value = "";
+      document.getElementById("resultado").innerText = "";
+      const imagemMoeda = document.getElementById("imagemMoeda");
+      imagemMoeda.src = "";
+      imagemMoeda.style.display = "none";
+    }
 
 function limparCampos() {
-    document.getElementById("nota1").value = "";
-    document.getElementById("nota2").value = "";
-    document.getElementById("nota3").value = "";
-    document.getElementById("exibirMedia").innerText = "";
-    document.getElementById("exibirSituacao").innerText = "";
+    document.getElementById("valor").value = "";
+    document.getElementById("imagemMoeda").src = "assets/real.png";
+    document.getElementById("resultado").innerText = "";
+    document.getElementById("moeda").value = "";
 }

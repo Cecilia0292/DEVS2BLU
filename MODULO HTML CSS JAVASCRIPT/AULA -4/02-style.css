@@ -18,22 +18,6 @@ h1{
     margin-top: 20px;
     color: #036811;
 }
-h2{
-    text-align: center;
-    margin: 20px;
-}
-
-form{
-
-    width: 600px;
-    height: 300px;
-    margin: 10% auto;
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
-    color: aliceblue;
-}
 
 input{
 
@@ -49,5 +33,31 @@ select{
     width: 400px;
     padding: 20px;
     margin-bottom: 20px;
-    color: aliceblue;
+    color: #036811;
+}
+img {
+    max-width: 100px;
+    margin-top: 100px;
+    position: relative;
+    left: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-inline-start: 50%;
+}
+#resultado {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #036811;
+}
+#moeda {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
 }
